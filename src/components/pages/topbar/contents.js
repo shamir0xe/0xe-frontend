@@ -1,9 +1,8 @@
+import { imgPack } from "src/helpers/utils";
+
 const contents = {
     imgs: {
-        logo: {
-            src: require("assets/logo.png"), 
-            alt: "logo",
-        }
+        logo: imgPack(require("assets/logo.png"), "logo")
     },
     txts: {
         items: [

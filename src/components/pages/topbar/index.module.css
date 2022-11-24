@@ -1,28 +1,29 @@
 .Header {
     width: 100vw;
     height: var(--topbar-h);
+    min-width: var(--min-width);
     position: fixed;
     top: 0;
     left: 0;
     background-color: rgb(20, 30, 50);
     z-index: 110;
-    overflow: hidden;
 }
 
 .Image {
     height: 80%;
     position: absolute;
     border-radius: calc(var(--topbar-h) * 0.5);
-    left: 0;
+    left: 5%;
     top: 50%;
     transform: translateY(-50%);
     animation: BubblyCat 7s ease-in-out infinite alternate, 
         RotateCat 9s linear infinite alternate;
+    z-index: 2;
 }
   
 @keyframes BubblyCat {
     to {
-        transform: translate(+300%, -50%);
+        transform: translate(+200%, -50%);
     }
 }
 
@@ -32,32 +33,33 @@
     }
 }
 
+.BurgerIcon {
+    display: none;
+    font-size: 22px;
+    transform: translateY(3px);
+}
+
 .Items {
     background-color: transparent;
+    height: var(--topbar-h);
     min-width: 60px;
     font-size: 18px;
     color: #aaa;
     font-weight: 600;
-    padding: 2px;
     border: none;
-    border-radius: 8px;
     text-align: center;
     cursor: pointer;
-    margin-left: 12px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-family: "IranSans";
+    padding: 0 12px 0 0;
+}
+
+.Items:first-of-type {
+    margin-right: 12px;
 }
 
 .Items:hover {
     text-decoration: underline;
-}
-
-.Navigator {
-    text-align: right;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
 }
 
 .Container {
@@ -67,4 +69,41 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    color: #aaa;
+}
+
+.Navigator {
+    text-align: right;
+    position: relative;
+    right: 0;
+    box-sizing: border-box;
+    background-color: rgb(20, 30, 50);
+}
+
+@media screen and (max-width: 666px) {
+    .Items:not(:first-of-type) {display: none;}
+    .BurgerIcon {display: inline-block;}
+}
+
+@media screen and (max-width: 666px) {
+    .Container.Responsive {
+        width: 100%;
+    }
+    .Navigator.Responsive  {
+        position: relative;
+        display: block;
+    }
+    .Items.Responsive {
+        padding-right: 12px;
+        margin-right: 0;
+    }
+    .Items.Responsive {
+        display: block;
+        width: 100%;
+        right: 0;
+        text-align: right;
+    }
+    .BurgerIcon.Responsive {
+        display: none;
+    }
 }

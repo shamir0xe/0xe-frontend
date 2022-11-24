@@ -6,7 +6,8 @@
 }
 
 :root {
-    --topbar-h: 100px;
+    --topbar-h: 75px;
+    --min-width: 375px;
 }
 
 .Container {
