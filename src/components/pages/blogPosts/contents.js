@@ -1,8 +1,8 @@
 const contents = {
     imgs: {
         logo: {
-            src: require("assets/xellu-logo.png"), 
-            alt: "xellu logo",
+            src: require("assets/logo.png"), 
+            alt: "logo",
         }
     },
     txts: {

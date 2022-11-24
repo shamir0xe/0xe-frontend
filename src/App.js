@@ -1,15 +1,16 @@
 import React from 'react'
+import classes from "./index.module.css"
 import Topbar from 'src/components/pages/topbar'
-import Landing from './components/pages/landing'
-import BlogPosts from './components/pages/blogPosts'
+import Landing from 'src/components/pages/landing'
+import BlogPosts from 'src/components/pages/blogPosts'
 
 
 const App = () => {
     return (
-        <div>
+        <div className={classes.Container}>
             <Topbar />
-            <Landing />
-            <BlogPosts />
+            {/* <Landing />
+            <BlogPosts /> */}
         </div>
     )
 }

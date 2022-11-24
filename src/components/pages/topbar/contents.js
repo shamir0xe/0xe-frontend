@@ -1,17 +1,17 @@
 const contents = {
     imgs: {
         logo: {
-            src: require("src/../assets/xellu-logo.png"), 
-            alt: "xellu logo",
+            src: require("assets/logo.png"), 
+            alt: "logo",
         }
     },
     txts: {
         items: [
-            'HOME',
-            'STORY',
-            'ROADMAP',
-            'ABOUT',
-            'MINT',
+            'بلاگ',
+            'پروژه‌ها',
+            'درباره',
+            'عکاسی',
+            'برنامه‌نویسی',
         ]
     }
    

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "IranSans";
+  src: url('assets/fonts/IranSans.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+:root {
+    --topbar-h: 100px;
+}
+
+.Container {
+    direction: rtl;
+}

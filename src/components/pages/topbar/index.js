@@ -1,17 +1,15 @@
 import React from 'react'
 import classes from './index.module.css'
 import contents from './contents'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 
-function Topbar(props) {
+const Topbar = (props) => {
     return (
-        <header>
+        <header className={classes.Header}>
             <div className={classes.Container}>
                 <img
                     src={contents.imgs.logo.src}
-                    className={classes.XelluLogo}
+                    className={classes.Image}
                     alt={contents.imgs.logo.alt}
                 />
                 <nav className={classes.Navigator}>
@@ -27,10 +25,6 @@ function Topbar(props) {
                             )
                         }
                     )}
-                    <div className={classes.SearchWrapper}>
-                        <input />
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </div>
                 </nav>
             </div>
         </header>
