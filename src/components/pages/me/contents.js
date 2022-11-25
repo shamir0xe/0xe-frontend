@@ -45,6 +45,10 @@ const contents = {
             url: "https://www.twitch.tv/real0xe",
             logo: imgPack("logos/twitch.png", "twitch"),
         },
+        {
+            url: "https://steamcommunity.com/id/shamir0xe",
+            logo: imgPack("logos/steam.png", "steam")
+        }
     ],
 };
 
