@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import classes from "./index.module.css"
 import Topbar from 'src/components/pages/topbar'
-import Landing from 'src/components/pages/landing'
-import BlogPosts from 'src/components/pages/blogPosts'
+import Blog from 'src/components/pages/blog'
+import Me from 'src/components/pages/me'
+import Projects from 'src/components/pages/projects'
+import Shoots from 'src/components/pages/shoots'
+import Programming from 'src/components/pages/programming'
+import Footer from 'src/components/pages/footer'
 
 
 const App = () => {
@@ -11,8 +15,12 @@ const App = () => {
     return (
         <div className={classes.Container}>
             <Topbar page={page} setPage={setPage}/>
-            {/* <Landing />
-            <BlogPosts /> */}
+            <Blog active={page == 0} page={page}/>
+            <Me active={page == 2} page={page} />
+            <Projects active={page == 1} page={page}/>
+            <Shoots active={page == 3} page={page}/>
+            <Programming active={page == 4} page={page}/>
+            <Footer />
         </div>
     )
 }

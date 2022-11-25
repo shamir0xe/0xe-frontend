@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
-import classes from './index.module.css'
-import contents from './contents'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBurger } from '@fortawesome/free-solid-svg-icons'
-import { appendConditionalClass } from 'src/helpers/utils';
-
+import React, { useState } from "react";
+import classes from "./index.module.css";
+import contents from "./contents";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBurger } from "@fortawesome/free-solid-svg-icons";
+import { appendConditionalClass } from "src/helpers/utils";
 
 const Topbar = (props) => {
     const [burger, setBurger] = useState(0);
@@ -15,26 +14,26 @@ const Topbar = (props) => {
             classes.Responsive,
             ...inputClasses
         );
-    }
+    };
 
     const burgerToggle = () => {
-        setBurger(1 - burger)
-    }
+        setBurger(1 - burger);
+    };
 
     const burgerPress = (pressedIndex) => {
-        props.setPage(pressedIndex)
-        setBurger(0)
-    }
+        props.setPage(pressedIndex);
+        setBurger(0);
+    };
 
     const orderBurger = () => {
-        let order = [...Array(contents.txts.items.length).keys()]
-        order = order.filter(function(value) {
-            return value != props.page
-        })
-        order = order.sort(() => Math.random() - 0.5)
-        order = [props.page, ...order]
+        let order = [...Array(contents.txts.items.length).keys()];
+        order = order.filter(function (value) {
+            return value != props.page;
+        });
+        order = order.sort(() => Math.random() - 0.5);
+        order = [props.page, ...order];
         return order;
-    }
+    };
 
     return (
         <header className={classes.Header}>
@@ -45,27 +44,26 @@ const Topbar = (props) => {
             />
             <div className={appendBurger(classes.Container)}>
                 <nav className={appendBurger(classes.Navigator)}>
-                    <FontAwesomeIcon 
-                        className={appendBurger(classes.BurgerIcon)} 
-                        icon={faBurger} 
-                        onClick={() => burgerToggle()} />
-                    {[...orderBurger()].map(
-                        (value, index) => {
-                            return (
-                                <button
-                                    key={`btn-${index}`}
-                                    className={appendBurger(classes.Items)}
-                                    onClick={() => burgerPress(value)}
-                                >
-                                    {contents.txts.items[value]}
-                                </button>
-                            )
-                        }
-                    )}
+                    <FontAwesomeIcon
+                        className={appendBurger(classes.BurgerIcon)}
+                        icon={faBurger}
+                        onClick={() => burgerToggle()}
+                    />
+                    {[...orderBurger()].map((value, index) => {
+                        return (
+                            <button
+                                key={`btn-${index}`}
+                                className={appendBurger(classes.Items)}
+                                onClick={() => burgerPress(value)}
+                            >
+                                {contents.txts.items[value]}
+                            </button>
+                        );
+                    })}
                 </nav>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Topbar
+export default Topbar;

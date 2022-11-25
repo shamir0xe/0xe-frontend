@@ -2,9 +2,9 @@ import { imgPack } from "src/helpers/utils";
 
 const contents = {
     imgs: {
-        logo: imgPack("logos/logo.png", "logo")
     },
     txts: {
+        title: "درباره‌ی من",
         items: [
             'بلاگ',
             'پروژه‌ها',

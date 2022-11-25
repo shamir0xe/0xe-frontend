@@ -1,0 +1,12 @@
+.Container {
+    width: 100%;
+    height: var(--footer-h);
+    box-sizing: content-box;
+}
+
+.Text {
+    text-align: center;
+    line-height: var(--footer-h);
+    font-size: x-small;
+    margin: 0;
+}

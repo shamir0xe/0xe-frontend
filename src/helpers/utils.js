@@ -4,7 +4,7 @@ const appendConditionalClass = (value, targetClass, ...baseClasses) => {
 
 const imgPack = (src, alt) => {
     return {
-        src: src,
+        src: require("../../assets/" + src),
         alt: alt
     };
 }

@@ -3,13 +3,41 @@
   src: url('assets/fonts/IranSans.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
+  unicode-range: U+06??;
+}
+
+@font-face {
+  font-family: "Koodak";
+  src: url('assets/fonts/Koodak.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  unicode-range: U+06??;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url('assets/fonts/FiraSans-Regular.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
 }
 
 :root {
     --topbar-h: 75px;
+    --footer-h: 50px;
     --min-width: 375px;
+    --background-color: antiquewhite;
 }
 
 .Container {
+    background-color: var(--background-color);
     direction: rtl;
+    font-family: "IranSans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
+    sans-serif;
+}
+
+p {
+    text-indent: 24px;
+    text-align: justify;
+    font-family: "Koodak", "FiraSans";
 }

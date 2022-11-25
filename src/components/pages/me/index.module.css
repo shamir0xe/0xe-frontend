@@ -1,0 +1,45 @@
+.Container {
+    width: 100%;
+    min-height: calc(100vh - var(--topbar-h) - var(--footer-h));
+    position: relative;
+    color: black;
+    background-color: var(--background-color);
+    margin-top: var(--topbar-h);
+    min-width: var(--min-width);
+}
+
+.Body {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 12px;
+}
+
+.SocialList {
+    direction: ltr;
+    font-family: "FiraSans";
+    margin-bottom: 0;
+}
+
+.SocialItem {
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    line-height: 50px;
+}
+
+.SocialLogo {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    position: relative;
+    padding-right: 12px;
+}
+
+@media screen and (max-width: 666px) {
+    .Body {
+        width: 90%;
+    }
+    p {
+        text-indent: 5px;
+    }
+}
