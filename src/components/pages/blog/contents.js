@@ -5,8 +5,11 @@ const contents = {
     },
     txts: {
         title: "‌بلاگ"
-    }
-   
+    },
+    paths: {
+        blogCards: "src/components/blog"
+    },
+    cardsList: ['template', '001', 'template']
 };
 
 export default contents;

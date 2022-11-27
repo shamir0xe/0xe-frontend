@@ -1,0 +1,31 @@
+.Container {
+    width: 100%;
+    min-height: var(--blog-card-h);
+    position: relative;
+    color: black;
+    background-color: var(--blog-card-background-color);
+    padding: 12px 24px;
+    box-sizing: border-box;
+}
+
+.Title {
+    text-align: center;
+}
+
+.LeftAlign {
+    text-align: left;
+}
+
+.Img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Footer > p {
+    text-align: left;
+    font-size: xx-small;
+    margin: 0;
+    border-top: 1px solid;
+}
+

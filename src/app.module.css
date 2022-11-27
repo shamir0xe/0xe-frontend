@@ -1,3 +1,5 @@
+/* @import "https://unpkg.com/open-props"; */
+
 @font-face {
   font-family: "IranSans";
   src: url('assets/fonts/IranSans.ttf') format('truetype');
@@ -21,14 +23,23 @@
   font-style: normal;
 }
 
-:root {
-    --topbar-h: 75px;
-    --footer-h: 50px;
-    --min-width: 375px;
-    --background-color: antiquewhite;
+.Container {
+  width: 100%;
 }
 
-.Container {
+:root {
+    --topbar-h: var(--size-10);
+    --footer-h: var(--size-9);
+    --blog-card-h: var(--size-14);
+    --blog-card-bg: var(--sand-0);
+    --blog-card-margin-v: var(--size-5);
+    --background-color: var(--indigo-1);
+    --topbar-bg: var(--blue-8);
+    --topbar-bg-hover: var(--blue-7);
+    --topbar-color: var(--blue-0);
+}
+
+body {
     background-color: var(--background-color);
     direction: rtl;
     font-family: "IranSans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -37,7 +48,7 @@
 }
 
 p {
-    text-indent: 24px;
+    text-indent: var(--size-3);
     text-align: justify;
     font-family: "Koodak", "FiraSans";
 }

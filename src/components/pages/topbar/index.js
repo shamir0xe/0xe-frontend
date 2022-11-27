@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classes from "./index.module.css";
+import classes from "./topbar.module.css";
 import contents from "./contents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
@@ -44,11 +44,12 @@ const Topbar = (props) => {
             />
             <div className={appendBurger(classes.Container)}>
                 <nav className={appendBurger(classes.Navigator)}>
-                    <FontAwesomeIcon
-                        className={appendBurger(classes.BurgerIcon)}
-                        icon={faBurger}
+                    <button
+                        className={appendBurger(classes.Items, classes.BurgerIcon)}
                         onClick={() => burgerToggle()}
-                    />
+                    >
+                        <FontAwesomeIcon icon={faBurger} />
+                    </button>
                     {[...orderBurger()].map((value, index) => {
                         return (
                             <button

@@ -5,7 +5,6 @@
     color: black;
     background-color: var(--background-color);
     margin-top: var(--topbar-h);
-    min-width: var(--min-width);
 }
 
 .Body {

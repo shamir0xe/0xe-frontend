@@ -1,0 +1,25 @@
+.Content {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: var(--footer-h);
+}
+
+.Title {
+    text-align: center;
+}
+
+.LeftAlign {
+    text-align: left;
+}
+
+.Img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 666px) {
+    .Content {
+        width: 90%;
+    }
+}

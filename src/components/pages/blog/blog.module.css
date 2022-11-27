@@ -1,0 +1,60 @@
+.Container {
+    width: 100%;
+    min-height: calc(100vh - var(--topbar-h) - var(--footer-h));
+    position: relative;
+    background-color: var(--background-color);
+    margin-top: var(--topbar-h);
+}
+
+.Cards {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: var(--size-2);
+}
+
+.Cards > section {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: var(--blog-card-margin-v);
+    box-shadow: var(--shadow-3);
+    min-height: var(--blog-card-h);
+    background-color: var(--blog-card-bg);
+    border-radius: var(--radius-3);
+    padding: var(--size-2) var(--size-3);
+}
+
+.Cards > section footer {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: var(--size-3);
+    color: var(--gray-8);
+}
+
+.Cards > section footer > p {
+    text-align: left;
+    font-size: var(--font-size-0);
+    margin: 0;
+    border-top: 1px solid;
+}
+
+@media screen and (max-width: 666px) {
+    .Cards {
+        width: 90%;
+    }
+    .Cards > section {
+        margin-top: var(--size-3);
+        border-radius: var(--radius-2);
+    }
+    .Cards > section footer {
+        width: 95%;
+        padding-bottom: var(--size-2);
+    }
+    .Cards > section footer > p {
+        font-size: var(--font-size-00);
+    }
+}

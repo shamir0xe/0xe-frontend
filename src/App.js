@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import classes from "./index.module.css"
+import classes from "./app.module.css"
 import Topbar from 'src/components/pages/topbar'
 import Blog from 'src/components/pages/blog'
 import Me from 'src/components/pages/me'
@@ -10,7 +10,7 @@ import Footer from 'src/components/pages/footer'
 
 
 const App = () => {
-    const [page, setPage] = useState(2)
+    const [page, setPage] = useState(0)
 
     return (
         <div className={classes.Container}>

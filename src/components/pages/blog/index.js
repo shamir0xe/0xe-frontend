@@ -1,22 +1,42 @@
-import React, { useState } from "react";
-import classes from "./index.module.css";
+import React, { lazy, useEffect, useState } from "react";
+import classes from "./blog.module.css";
 import contents from "./contents";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { appendConditionalClass } from "src/helpers/utils";
 
 const Blog = (props) => {
+    const [cards, setCards] = useState([]);
+
+    const importCard = (cardName) =>
+        lazy(async () => {
+            try {
+                return await import("src/components/blog/" + cardName);
+            } catch (e) {
+                return await import("src/components/blog/null");
+            }
+        });
+
+    useEffect(() => {
+        async function loadCards() {
+            const promises = cardsList.map(async (cardName) => {
+                const Card = importCard(cardName);
+                return <Card key={cardName} />;
+            });
+            Promise.all(promises).then(setCards);
+        }
+        loadCards();
+    }, [cardsList]);
+
+    const cardsList = contents.cardsList;
+
     const component = (
         <section className={classes.Container}>
-            <text>
-                <h1>{contents.txts.title}</h1>
-                <h2>{props.page}</h2>
-            </text>
+            <div className={classes.Cards}>
+                <h1 className={classes.Title}>{contents.txts.title}</h1>
+                {cards}
+            </div>
         </section>
-    )
-
-    return (
-        props.active ? component : <div/>
     );
+
+    return props.active ? component : <div />;
 };
 
 export default Blog;

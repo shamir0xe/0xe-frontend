@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classes from "./index.module.css";
+import classes from "./footer.module.css";
 import contents from "./contents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { appendConditionalClass } from "src/helpers/utils";
