@@ -4,11 +4,49 @@
     position: relative;
     background-color: var(--background-color);
     margin-top: var(--topbar-h);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--size-1);
+}
+
+.TableOfContents {
+    width: 20%;
+    /* background-color: var(--lime-5); */
+    position: relative;
+    /* display: inline-block; */
+    /* min-height: 200px; */
+}
+
+.TableOfContents > ul {
+    /* padding-right: var(--size-4); */
+    padding-right: 0;
+}
+
+.CardLink {
+    width: fit-content;
+    /* padding-bottom: var(--size-2); */
+    cursor: pointer;
+    background: white;
+    color: var(--blue-8);
+    font-size: var(--font-size-1);
+    margin: var(--size-1) 0;
+    padding-inline: var(--size-5);
+    padding-block: var(--size-2);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+    list-style: none;
+}
+
+.CardLink:hover {
+    background-color: var(--blue-2);
 }
 
 .Cards {
-    width: 80%;
-    margin: 0 auto;
+    width: 75%;
+    /* background-color: cadetblue; */
+    /* display: inline-block; */
+    /* margin: 0 auto; */
     position: relative;
     padding-top: var(--size-2);
 }
@@ -56,5 +94,8 @@
     }
     .Cards > section footer > p {
         font-size: var(--font-size-00);
+    }
+    .TableOfContents {
+        display: none;
     }
 }

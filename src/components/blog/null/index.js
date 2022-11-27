@@ -4,7 +4,7 @@ import contents from "./contents";
 
 const NullCard = (props) => {
     return (
-        <section className={classes.Container}>
+        <section className={classes.Container} ref={props.reference}>
             <h1 className={classes.Title}>{contents.txts.title}</h1>
             <footer className={classes.Footer}>
                 <p>نوشته شده در ۶ آذر، ۱۴۰۱</p>

@@ -2,9 +2,9 @@ import React from "react";
 import classes from "./blog001.module.css";
 import contents from "./contents";
 
-const Card001 = () => {
+const Card001 = (props) => {
     return (
-        <section className={classes.Container}>
+        <section className={classes.Container} ref={props.reference}>
             <div className={classes.Content}>
                 <h1 className={classes.Title}>{contents.txts.title}</h1>
                 <p>

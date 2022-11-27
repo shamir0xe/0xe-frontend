@@ -4,12 +4,27 @@ const contents = {
     imgs: {
     },
     txts: {
-        title: "‌بلاگ"
+        title: "‌فهرست"
     },
     paths: {
         blogCards: "src/components/blog"
     },
-    cardsList: ['template', '001', 'template']
+    cardsList: [
+        'template', 
+        '001', 
+        'template',
+        'template',
+        '001', 
+        'template',
+        'template',
+        '001', 
+        'template',
+        'template',
+        'template',
+        'template',
+        'template',
+        'template',
+    ]
 };
 
 export default contents;
